@@ -1,0 +1,37 @@
+{
+    "name": "express-vue-getting-started",
+    "description": "An express + vuejs getting started project.",
+    "version": "0.0.1",
+    "scripts": {
+        "build-dev": "webpack --config webpack.dev.config.js",
+        "build-dev-watch": "webpack --config webpack.dev.config.js -w",
+        "dev": "concurrently --kill-others \"cross-env NODE_ENV=development node server/server.js\" \"cross-env NODE_ENV=development webpack -w --config webpack.dev.config.js\""
+    },
+    "dependencies": {
+        "body-parser": "^1.18.2",
+        "cookie-parser": "^1.4.3",
+        "express": "^4.16.3",
+        "express-session": "^1.15.6",
+        "session-file-store": "^1.2.0"
+    },
+    "devDependencies": {
+        "babel": "^6.23.0",
+        "babel-core": "^6.26.0",
+        "babel-loader": "^7.1.4",
+        "babel-preset-env": "^1.6.1",
+        "concurrently": "^3.5.1",
+        "cross-env": "^5.1.4",
+        "css-loader": "^0.28.11",
+        "html-webpack-plugin": "^3.2.0",
+        "node-sass": "^4.8.3",
+        "sass-loader": "^7.0.1",
+        "style-loader": "^0.21.0",
+        "vue": "^2.5.16",
+        "vue-loader": "^14.2.2",
+        "vue-router": "^3.0.1",
+        "vue-template-compiler": "^2.5.16",
+        "vuex": "^3.0.1",
+        "webpack": "^4.6.0",
+        "webpack-cli": "^2.0.14"
+    }
+}
