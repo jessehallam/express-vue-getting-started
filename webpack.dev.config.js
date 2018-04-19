@@ -27,13 +27,21 @@ module.exports = {
             {
                 test: /\.vue$/,
                 loader: 'vue-loader'
+            },
+            {
+                test: /\.(jpg|png|gif)$/,
+                loader: 'url-loader',
+                options: {
+                    fallback: 'file-loader',
+                    limit: 10000
+                }
             }
         ]
     },
     output: {
         filename: '[name].js',
         path: path.join(__dirname, 'wwwroot', 'dist'),
-        publicPath: 'dist'
+        publicPath: 'dist/'
     },
     plugins: [
         new HtmlWebpackPlugin({
